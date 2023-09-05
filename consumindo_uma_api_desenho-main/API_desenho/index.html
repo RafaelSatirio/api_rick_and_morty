@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Lista de Personagens</title>
+</head>
+<body>
+    <input type="text" id="id" placeholder="ID do personagem">
+
+    <label for="gender">Filtrar por Gênero:</label>
+    <select id="gender" onchange="aplicarFiltro()">
+        <option value="">Todos</option>
+        <option value="Male">Masculino</option>
+        <option value="Female">Feminino</option>
+        <option value="Genderless">Sem gênero</option>
+        <option value="unknown">Desconhecido</option>
+    </select>
+
+    <label for="status">Filtrar por Status:</label>
+    <select id="status" onchange="aplicarFiltro()">
+        <option value="">Todos</option>
+        <option value="Alive">Vivo</option>
+        <option value="Dead">Morto</option>
+        <option value="unknown">Desconhecido</option>
+    </select>
+    <button onclick="buscarPorId()">Buscar</button>
+
+    <table id="itemTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Status</th>
+                <th>Gênero</th>
+                <th>Espécie</th>
+                <th>Imagem</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <script src="./js/script.js"></script>
+</body>
+</html>
